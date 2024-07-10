@@ -22,7 +22,7 @@ class DetailWidget extends StatelessWidget {
         ),
         Container(
           height: SizeUtils.verticalBlockSize * 6,
-          width: SizeUtils.horizontalBlockSize * 100,
+          width: SizeUtils.screenWidth,
           decoration: BoxDecoration(
               border: Border.all(color: Colors.black.withOpacity(0.5)),
               borderRadius: BorderRadius.circular(10)

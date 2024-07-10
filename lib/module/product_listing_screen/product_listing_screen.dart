@@ -19,7 +19,6 @@ class ProductListingScreen extends StatelessWidget {
         leading: InkWell(
           onTap: () {
             Get.toNamed(Routes.profileScreen);
-
           },
           child: const Icon(Icons.person),
         ),
@@ -46,12 +45,14 @@ class ProductListingScreen extends StatelessWidget {
                 } else {
                   return GridView.builder(
                     itemCount: productController.productItems.length,
+                    shrinkWrap: true,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 12,
-                            mainAxisSpacing: 12,
-                            childAspectRatio: 0.69),
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                      childAspectRatio: 0.69,
+                    ),
                     itemBuilder: (context, index) {
                       return ProductItemsDisplay(
                         product: productController.productItems[index],

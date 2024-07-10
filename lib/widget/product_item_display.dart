@@ -28,7 +28,7 @@ class ProductItemsDisplay extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(10),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

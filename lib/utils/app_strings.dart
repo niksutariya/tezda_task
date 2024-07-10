@@ -15,8 +15,8 @@ class AppString {
   static const String category = 'Category';
   static const String bookNow = 'Book Now';
   static const String next = 'Next';
-  static const String logOut = 'Log Out';
-  static const String nameMessage = 'Please enter full name';
+  static const String logOut = 'Log out';
+  static const String nameMessage = 'Please enter full name and set image';
   static const String noImagePlaceholder = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJRS-4chjWMRAmrtz7ivK53K_uygrgjzw9Uw&s';
 }
 

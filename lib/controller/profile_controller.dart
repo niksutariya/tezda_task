@@ -21,16 +21,16 @@ class ProfileController extends GetxController {
     );
     imagePathSet.value = image?.path.toString() ?? '';
     file = File(image?.path ?? '');
-   await AppSharedPreference.setProfileImagePath(imagePathSet.value);
+    await AppSharedPreference.setProfileImagePath(imagePathSet.value);
   }
-Future onTapNextFunction() async {
-  if (nameController.text.isNotEmpty) {
-    await AppSharedPreference.setUserName(
-        nameController.text);
-    Get.offAllNamed(Routes.productListingScreen);
-  } else {
-    AppSnackBar.showErrorSnackBar(
-        message: AppString.nameMessage, title: 'Error');
+
+  Future onTapNextFunction() async {
+    if (nameController.text.isNotEmpty && imagePathSet.value.isNotEmpty) {
+      await AppSharedPreference.setUserName(nameController.text);
+      Get.offAllNamed(Routes.productListingScreen);
+    } else {
+      AppSnackBar.showErrorSnackBar(
+          message: AppString.nameMessage, title: 'Error');
+    }
   }
-}
 }

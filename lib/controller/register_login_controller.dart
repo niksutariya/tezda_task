@@ -29,7 +29,7 @@ class RegisterLoginController extends GetxController {
   Future<void> registerUser(String email, String password) async {
     try {
       await LoginServices.registerUser(email: email, password: password);
-      clear();
+      // clear();
       update();
     } catch (e, st) {
       log("Error:$e  st :- $st");

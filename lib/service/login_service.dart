@@ -17,11 +17,12 @@ class LoginServices {
       "email": email,
       "password": password,
     };
+    log("message:- ${json.encode(data)}");
     var response = await client.post(
       Uri.parse(AppConfig.registerUser),
       body: json.encode(data),
     );
-    if (response.statusCode == 201) {
+    if (response.statusCode == 200) {
       AppSnackBar.showErrorSnackBar(
           message: 'Registered Successfully', title: 'Success');
       Get.toNamed(Routes.loginScreen);
@@ -44,7 +45,7 @@ class LoginServices {
       body: json.encode(data),
     );
 
-    if (response.statusCode == 201) {
+    if (response.statusCode == 200) {
       await AppSharedPreference.setIsLogin(true);
       await AppSharedPreference.setEmail(email);
       AppSnackBar.showErrorSnackBar(
